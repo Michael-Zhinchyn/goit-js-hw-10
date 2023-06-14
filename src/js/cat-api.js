@@ -18,6 +18,7 @@ export function fetchBreeds() {
       loader.style.display = 'none';
     })
     .catch(error => {
+      Notiflix.failure(`${errorMsg.textContent}`);
       console.log(error);
       loader.style.display = 'none';
     });
@@ -31,7 +32,5 @@ function createMarkup(items) {
 
 const selectInput = document.querySelector('.breed-select');
 const loader = document.querySelector('.loader');
-
-window.onload = function () {
-  loader.style.display = 'none';
-};
+const errorMsg = document.querySelector('.error');
+errorMsg.style.display = 'none';
