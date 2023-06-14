@@ -13,6 +13,7 @@ export function fetchBreeds() {
       return response.json();
     })
     .then(data => {
+      console.log(data);
       selectInput.innerHTML = createMarkup(data);
       loader.style.display = 'none';
     })
