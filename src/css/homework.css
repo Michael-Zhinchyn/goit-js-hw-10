@@ -24,6 +24,12 @@ p {
 }
 
 .loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    display: none;
     transform: rotateZ(45deg);
     perspective: 1000px;
     border-radius: 50%;
