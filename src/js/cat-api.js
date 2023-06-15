@@ -5,7 +5,7 @@ const loader = document.querySelector('.loader');
 const errorMsg = document.querySelector('.error');
 errorMsg.style.display = 'none';
 
-function createMarkup(items) {
+function createBreedsMarkup(items) {
   return items
     .map(item => `<option value="${item.id}">${item.name}</option>`)
     .join('');
@@ -26,12 +26,18 @@ export function fetchBreeds() {
       return response.json();
     })
     .then(data => {
-      console.log(data);
-      selectBreed.innerHTML = createMarkup(data);
+      selectBreed.innerHTML = createBreedsMarkup(data);
       loader.style.display = 'none';
     })
     .catch(error => {
       console.log(error);
       loader.style.display = 'none';
     });
+}
+
+selectBreed.addEventListener('change', onChange);
+
+function onChange(event) {
+  const chosenBred = event.target.value;
+  console.log(chosenBred);
 }

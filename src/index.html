@@ -5,10 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HomeWork-10</title>
     <link rel="stylesheet" href="./css/index.css" />
+
+    <style>
+      .description {
+        margin-top: 10px;
+      }
+    </style>
   </head>
   <body>
-    <include src="./partials/cat-api.html"></include>
+    <header></header>
+    <main>
+      <div class="container">
+        <div class="flex-item">
+          <include src="./partials/about.html"></include>
+        </div>
 
+        <div class="flex-item">
+          <include src="./partials/cat-api.html"></include>
+        </div>
+      </div>
+    </main>
+
+    <footer></footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="index.js" type="module"></script>
   </body>
 </html>
