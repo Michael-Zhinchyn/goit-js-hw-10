@@ -22,7 +22,7 @@ closeButton.addEventListener('click', () => {
   backdrop.style.display = 'none';
 });
 
-function createBreedsMarkup(items) {
+export function createBreedsMarkup(items) {
   return items
     .map(item => `<option value="${item.id}">${item.name}</option>`)
     .join('');
@@ -51,7 +51,7 @@ export function fetchBreeds() {
     });
 }
 
-function fetchCatByBreed() {
+export function fetchCatByBreed() {
   loader.style.display = 'block';
 
   fetch(`${BASE_URL}images/search?breed_ids=${chosenBred}`)
@@ -74,16 +74,16 @@ function fetchCatByBreed() {
 
 selectBreed.addEventListener('change', onChange);
 
-function onChange(event) {
+export function onChange(event) {
   chosenBred = event.target.value;
   fetchCatByBreed();
 }
 
-function getBreedById(id) {
+export function getBreedById(id) {
   return breeds.find(breed => breed.id === id);
 }
 
-function createCatInfo(catData, id) {
+export function createCatInfo(catData, id) {
   const cat = catData[0];
   const catBreed = getBreedById(id);
   return `
