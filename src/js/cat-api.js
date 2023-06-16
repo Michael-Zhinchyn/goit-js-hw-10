@@ -93,5 +93,3 @@ function createCatInfo(catData, id) {
     <img src="${cat.url}" alt="${catBreed.name}" width=500>
   `;
 }
-
-fetchBreeds();
