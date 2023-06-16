@@ -1,7 +1,8 @@
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import 'select2/dist/js/select2.min.js';
+import 'select2/dist/css/select2.min.css';
 
 const selectBreed = document.querySelector('.breed-select');
-const catInfo = document.querySelector('.cat-info');
 const loader = document.querySelector('.loader');
 const errorMsg = document.querySelector('.error');
 const BASE_URL = 'https://api.thecatapi.com/v1/';
@@ -40,6 +41,8 @@ export function fetchBreeds() {
     .then(data => {
       breeds = data;
       selectBreed.innerHTML = createBreedsMarkup(data);
+      $('select').select2();
+
       loader.style.display = 'none';
     })
     .catch(error => {
@@ -90,3 +93,5 @@ function createCatInfo(catData, id) {
     <img src="${cat.url}" alt="${catBreed.name}" width=500>
   `;
 }
+
+fetchBreeds();

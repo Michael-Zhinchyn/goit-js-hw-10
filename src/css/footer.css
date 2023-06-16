@@ -1,0 +1,7 @@
+.footer {
+    display: flex;
+    text-align: center;
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+}

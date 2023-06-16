@@ -1,0 +1,25 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom:
+        1px solid rgb(0, 0, 0);
+}
+
+.header-nav {
+    display: flex;
+}
+
+.heading {
+    padding: 22 22;
+}
+
+.fa-external-link {
+    font-size: 22px;
+    padding: 30;
+    color: #261a05;
+    transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1)
+}
+
+.fa-external-link:hover {
+    color: #ff6f00;
+}

@@ -18,9 +18,12 @@
     "url": "https://github.com/goitacademy/parcel-project-template/issues"
   },
   "dependencies": {
+    "jquery": "^3.7.0",
     "modern-normalize": "^1.1.0",
     "notiflix": "^3.2.6",
-    "slim-select": "^2.5.0"
+    "select2": "^4.1.0-rc.0",
+    "slim-select": "^2.5.0",
+    "swiper": "^9.4.1"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",

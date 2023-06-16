@@ -13,3 +13,6 @@ onYouTubeIframeAPIReady();
 window.onload = function () {
   loader.style.display = 'none';
 };
+
+import './js/badje';
+import './js/entrance-modal';
