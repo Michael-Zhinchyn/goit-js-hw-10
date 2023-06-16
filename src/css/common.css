@@ -188,3 +188,35 @@ p {
 #cat-modal img {
     max-width: 900px;
 }
+.video {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#player {
+    width: 250px;
+    height: 125px;
+    opacity: 0.5;
+    z-index: -1;
+    transition: opacity 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.playBtn {
+    cursor: pointer;
+    color: rgb(172, 140, 91);
+    width: 85px;
+    border-radius: 10px;
+    border: rgb(172, 140, 91) 1px solid;
+    margin-right: 25px;
+    background-color: #ffffff7d;
+}
+
+.playBtn:hover {
+    background-color: #fff;
+}
+
+.kitty-radio {
+    width: 350px;
+}
+
