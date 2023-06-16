@@ -7,11 +7,19 @@ const errorMsg = document.querySelector('.error');
 const BASE_URL = 'https://api.thecatapi.com/v1/';
 const API_KEY =
   'live_sGqxpzYLvFus7p2nXND3T4qIBX7yjf1C275c2408M4sTblpioeOksmdnAZteZmPh';
+const backdrop = document.querySelector('#backdrop');
+const catModal = document.querySelector('#cat-modal-content');
+const closeButton = document.querySelector('#close-button');
 
 let chosenBred;
 let breeds = [];
 
 errorMsg.style.display = 'none';
+backdrop.style.display = 'none';
+
+closeButton.addEventListener('click', () => {
+  backdrop.style.display = 'none';
+});
 
 function createBreedsMarkup(items) {
   return items
@@ -30,7 +38,7 @@ export function fetchBreeds() {
       return response.json();
     })
     .then(data => {
-      breeds = data; // зберігаємо дані в breeds для подальшого використання
+      breeds = data;
       selectBreed.innerHTML = createBreedsMarkup(data);
       loader.style.display = 'none';
     })
@@ -40,7 +48,7 @@ export function fetchBreeds() {
     });
 }
 
-export function fetchCatByBreed() {
+function fetchCatByBreed() {
   loader.style.display = 'block';
 
   fetch(`${BASE_URL}images/search?breed_ids=${chosenBred}`)
@@ -51,7 +59,8 @@ export function fetchCatByBreed() {
       return response.json();
     })
     .then(data => {
-      catInfo.innerHTML = creatCatInfo(data, chosenBred);
+      catModal.innerHTML = createCatInfo(data, chosenBred);
+      backdrop.style.display = 'flex';
       loader.style.display = 'none';
     })
     .catch(error => {
@@ -71,7 +80,7 @@ function getBreedById(id) {
   return breeds.find(breed => breed.id === id);
 }
 
-function creatCatInfo(catData, id) {
+function createCatInfo(catData, id) {
   const cat = catData[0];
   const catBreed = getBreedById(id);
   return `

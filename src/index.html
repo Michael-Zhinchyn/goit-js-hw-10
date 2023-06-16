@@ -2,33 +2,31 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="./images/cropped-favicon-orange-300x300.png"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HomeWork-10</title>
+    <title>CAT-API</title>
     <link rel="stylesheet" href="./css/index.css" />
-
-    <style>
-      .description {
-        margin-top: 10px;
-      }
-    </style>
   </head>
   <body>
-    <header></header>
-    <main>
-      <div class="container">
-        <div class="flex-item">
-          <include src="./partials/about.html"></include>
-        </div>
+    <include src="./partials/header.html"></include>
 
-        <div class="flex-item">
-          <include src="./partials/cat-api.html"></include>
-        </div>
+    <div class="container">
+      <div class="flex-item">
+        <include src="./partials/about.html"></include>
       </div>
-    </main>
 
-    <footer></footer>
+      <div class="flex-item">
+        <include src="./partials/cat-api.html"></include>
+      </div>
+    </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <include src="./partials/footer.html"></include>
+    <include src="./partials/modal.html"></include>
+
     <script src="index.js" type="module"></script>
   </body>
 </html>

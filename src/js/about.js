@@ -1,18 +1,19 @@
-export function toggleDescription() {
-  // Визначте всі елементи з класом .clickable-element
-  const clickableElements = document.querySelectorAll('.clickable-element');
+const clickableElements = document.querySelectorAll('.clickable-element');
 
-  clickableElements.forEach(element => {
-    element.addEventListener('click', () => {
-      // Пошук вкладеного елемента .description
-      const descriptionElement = element.querySelector('.description');
-
-      // Перевіряємо стан відображення елемента і перемикаємо його
-      if (descriptionElement.style.display === 'none') {
-        descriptionElement.style.display = 'block';
-      } else {
-        descriptionElement.style.display = 'none';
-      }
-    });
+clickableElements.forEach(element => {
+  element.addEventListener('click', function (event) {
+    event.stopPropagation(); // Щоб запобігти "всплиттю" події вгору
+    const description = this.querySelector('.description');
+    description.style.display =
+      description.style.display === 'none' ? 'block' : 'none';
   });
-}
+});
+
+document.addEventListener('click', function () {
+  clickableElements.forEach(element => {
+    const description = element.querySelector('.description');
+    if (description.style.display === 'block') {
+      description.style.display = 'none';
+    }
+  });
+});
