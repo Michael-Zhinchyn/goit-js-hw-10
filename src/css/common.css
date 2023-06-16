@@ -203,9 +203,12 @@ p {
 }
 
 .playBtn {
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
     cursor: pointer;
     color: rgb(172, 140, 91);
-    width: 85px;
+    width: 90px;
     border-radius: 10px;
     border: rgb(172, 140, 91) 1px solid;
     margin-right: 25px;
@@ -215,6 +218,7 @@ p {
 .playBtn:hover {
     background-color: #fff;
 }
+
 
 .kitty-radio {
     width: 350px;
