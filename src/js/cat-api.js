@@ -87,6 +87,6 @@ function createCatInfo(catData, id) {
     <h2>${catBreed.name}</h2>
     <p>${catBreed.temperament}</p>
     <p>${catBreed.description}</p>
-    <img src="${cat.url}" alt="${catBreed.name}">
+    <img src="${cat.url}" alt="${catBreed.name}" width=500>
   `;
 }
