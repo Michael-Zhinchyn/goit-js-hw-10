@@ -23,7 +23,7 @@
     "notiflix": "^3.2.6",
     "select2": "^4.1.0-rc.0",
     "slim-select": "^2.5.0",
-    "swiper": "^9.4.1"
+    
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
