@@ -1,8 +1,16 @@
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const selectBreed = document.querySelector('.breed-select');
+const catInfo = document.querySelector('.cat-info');
 const loader = document.querySelector('.loader');
 const errorMsg = document.querySelector('.error');
+const BASE_URL = 'https://api.thecatapi.com/v1/';
+const API_KEY =
+  'live_sGqxpzYLvFus7p2nXND3T4qIBX7yjf1C275c2408M4sTblpioeOksmdnAZteZmPh';
+
+let chosenBred;
+let breeds = [];
+
 errorMsg.style.display = 'none';
 
 function createBreedsMarkup(items) {
@@ -12,10 +20,6 @@ function createBreedsMarkup(items) {
 }
 
 export function fetchBreeds() {
-  const BASE_URL = 'https://api.thecatapi.com/v1/';
-  const API_KEY =
-    'live_sGqxpzYLvFus7p2nXND3T4qIBX7yjf1C275c2408M4sTblpioeOksmdnAZteZmPh';
-
   loader.style.display = 'block';
 
   fetch(`${BASE_URL}breeds?api_key=${API_KEY}`)
@@ -26,7 +30,28 @@ export function fetchBreeds() {
       return response.json();
     })
     .then(data => {
+      breeds = data; // зберігаємо дані в breeds для подальшого використання
       selectBreed.innerHTML = createBreedsMarkup(data);
+      loader.style.display = 'none';
+    })
+    .catch(error => {
+      console.log(error);
+      loader.style.display = 'none';
+    });
+}
+
+export function fetchCatByBreed() {
+  loader.style.display = 'block';
+
+  fetch(`${BASE_URL}images/search?breed_ids=${chosenBred}`)
+    .then(response => {
+      if (!response.ok) {
+        Notify.failure('Котик не знайдений');
+      }
+      return response.json();
+    })
+    .then(data => {
+      catInfo.innerHTML = creatCatInfo(data, chosenBred);
       loader.style.display = 'none';
     })
     .catch(error => {
@@ -38,6 +63,21 @@ export function fetchBreeds() {
 selectBreed.addEventListener('change', onChange);
 
 function onChange(event) {
-  const chosenBred = event.target.value;
-  console.log(chosenBred);
+  chosenBred = event.target.value;
+  fetchCatByBreed();
+}
+
+function getBreedById(id) {
+  return breeds.find(breed => breed.id === id);
+}
+
+function creatCatInfo(catData, id) {
+  const cat = catData[0];
+  const catBreed = getBreedById(id);
+  return `
+    <h2>${catBreed.name}</h2>
+    <p>${catBreed.temperament}</p>
+    <p>${catBreed.description}</p>
+    <img src="${cat.url}" alt="${catBreed.name}">
+  `;
 }
