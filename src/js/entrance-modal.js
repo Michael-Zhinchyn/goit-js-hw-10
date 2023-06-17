@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', event => {
   const modal = document.querySelector('.modal');
-  const button = document.querySelector('.enrance-modal-Btn');
+  const button = document.querySelector('.entrance-modal-Btn');
   // Завантажуємо YouTube IFrame Player API код асинхронно
   var tag = document.createElement('script');
   tag.src = 'https://www.youtube.com/iframe_api';
