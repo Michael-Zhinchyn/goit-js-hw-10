@@ -15,11 +15,14 @@
     background-color: #fefefe;
     border-radius: 15px;
     text-align: center;
-    margin: 15% auto;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    width: 88%;
+    max-width: 65%;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
-    height: 29%;
 }
 
 .modal-header {
@@ -36,6 +39,7 @@
 
 .thanks {
     margin-top: 30px;
+    margin: 20px;
 }
 
 .entrance-modal-Btn {
@@ -44,14 +48,27 @@
     font-weight: 500;
     padding: 20px 50px;
     border-radius: 10px;
+    transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
     position: absolute;
     left: 50%;
+    top: 50%;
+    /* Відстань між елементом з класом modal-content і button-container */
     transform: translateX(-50%);
-    transform: translateY(-40%);
-    transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .entrance-modal-Btn:hover {
     background-color: rgb(223, 190, 163);
-    cursor: var(--cat-paw);
+    cursor: pointer;
+}
+
+.modal-content::after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.button-container {
+    margin-top: calc(100% + 20px;
+    /* Відстань між елементом з класом modal-content і button-container */
 }
