@@ -25,18 +25,21 @@
     margin-top: 10px;
 }
 
+p {
+    margin-top: 15px;
+    font-size: large;
+}
 
 .welcome {
     margin-bottom: 20px;
     text-align: center;
 }
 
-p {
-    margin-top: 8px;
-}
 
 .content-text {
+    margin-top: 8px;
     font-size: 19px;
+    color: rgb(28, 6, 6)
 }
 
 .kitty-radio {
@@ -44,6 +47,10 @@ p {
     align-items: center;
     justify-content: space-between;
     width: 350px;
+}
+
+.volume-text {
+    color: #e17612;
 }
 
 .playBtn {
