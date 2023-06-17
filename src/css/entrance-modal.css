@@ -31,7 +31,7 @@
 
 .modal-header {
     padding: 20px;
-    color: rgb(172, 140, 91);
+    color: #e17612;
     font-size: 40px;
 }
 
@@ -42,6 +42,7 @@
 }
 
 .thanks {
+    font-style: italic;
     margin-top: 30px;
     text-align: right;
 }
