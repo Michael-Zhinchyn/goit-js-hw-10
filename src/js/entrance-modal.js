@@ -51,8 +51,8 @@ document.addEventListener('DOMContentLoaded', event => {
   el.style.bottom = '20px';
   el.style.transform = 'rotate(135deg)';
   el.style.background = 'linear-gradient(-360deg, #005BBB 50%, #FFD500 50%)';
-  el.style.width = '200px';
-  el.style.height = '54px';
+  el.style.width = '280px';
+  el.style.height = '84px';
   el.style.position = 'fixed';
   el.style.zIndex = '999';
   el.setAttribute('id', 'we-stand-with-ukraine');
