@@ -13,10 +13,6 @@
 }
 
 .cat-info-block {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
     max-width: calc(100% - 40px);
     /* змінено */
     max-height: calc(100% - 40px);
@@ -53,11 +49,7 @@
     cursor: pointer;
 }
 
-.text-content {
-    flex-basis: 50%;
-}
-
-.image-content img {
+#cat-modal img {
     max-width: 100%;
     /* змінено */
     border-radius: 35px;
@@ -68,12 +60,11 @@
 /* Media query for mobile devices */
 @media only screen and (max-width: 600px) {
     .cat-info-block {
-        flex-direction: column;
         padding: 10px;
         /* зменшено padding */
     }
 
-    .image-content img {
+    #cat-modal img {
         padding: 10px;
         /* зменшено padding */
     }
