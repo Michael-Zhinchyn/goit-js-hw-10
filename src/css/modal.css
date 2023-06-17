@@ -5,7 +5,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.678);
+    background-color: rgba(0, 0, 0, 0.758);
     justify-content: center;
     align-items: center;
 }
@@ -36,7 +36,7 @@
 }
 
 .cat-info-modal-Btn:hover {
-    color: rgb(183, 22, 22);
+    color: #e17612;
     cursor: pointer;
 }
 
