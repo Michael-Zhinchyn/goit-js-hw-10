@@ -33,6 +33,8 @@ p {
 .welcome {
     margin-bottom: 20px;
     text-align: center;
+    font-size: larger;
+    color: #e17612;
 }
 
 
