@@ -41,7 +41,7 @@ export function fetchBreeds() {
     .then(data => {
       breeds = data;
       selectBreed.innerHTML = createBreedsMarkup(data);
-      $('select').select2();
+
       loader.style.display = 'none';
     })
     .catch(error => {
