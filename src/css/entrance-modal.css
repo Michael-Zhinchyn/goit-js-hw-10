@@ -20,10 +20,11 @@
 }
 
 .modal-content {
-    background-color: #fefefe;
+    background-color: #fefefe60;
     border-radius: 15px;
     text-align: center;
     padding: 20px;
+    color: #fefefe;
     border: 1px solid #888;
     width: 90%;
     margin: auto;
@@ -48,18 +49,24 @@
 }
 
 .entrance-modal-Btn {
-    background-color: rgb(255, 255, 255);
-    font-size: 22px;
+    background-color: rgba(223, 190, 163, 0.062);;
+    color: #fefefe;
+    border: none;
+    font-size: 28px;
     font-weight: 500;
     padding: 20px 50px;
     border-radius: 10px;
-    transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 200ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
     margin-top: 100px;
+    ;
 }
 
 .entrance-modal-Btn:hover {
-    background-color: rgb(223, 190, 163);
+    background-color: rgba(223, 190, 163, 0);
     cursor: pointer;
+    color: #e17612;
+    cursor: var(--cat-paw)
 }
 
 .modal-content::after {
