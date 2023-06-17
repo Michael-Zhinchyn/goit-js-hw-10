@@ -1,14 +1,22 @@
+// Слухаємо подію завантаження контенту документа
 document.addEventListener('DOMContentLoaded', event => {
+  // Отримуємо доступ до модального вікна та кнопки в документі
   const modal = document.querySelector('.modal');
   const button = document.querySelector('.entrance-modal-Btn');
-  // Завантажуємо YouTube IFrame Player API код асинхронно
+
+  // Створюємо новий елемент script для підключення YouTube API
   let tag = document.createElement('script');
   tag.src = 'https://www.youtube.com/iframe_api';
   let firstScriptTag = document.getElementsByTagName('script')[0];
+  // Вставляємо новий елемент script перед існуючими скриптами в документі
   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-  window.player; // Зробіть об'єкт player глобальним
+  // Оголошуємо глобальну змінну player
+  window.player;
+
+  // Ця функція викликається YouTube API
   function onYouTubeIframeAPIReady() {
+    // Ініціалізуємо плеєр YouTube з відео
     player = new YT.Player('player', {
       height: '315',
       width: '560',
@@ -19,10 +27,11 @@ document.addEventListener('DOMContentLoaded', event => {
     });
   }
 
+  // Ця функція викликається, коли плеєр готовий до відтворення відео
   function onPlayerReady(event) {
-    event.target.setVolume(30);
+    event.target.setVolume(30); // Встановлюємо гучність відео
 
-    // При кліку на кнопку модального вікна відтворюємо відео, ховаємо модальне вікно та видаляємо елемент
+    // Додаємо слухач події для кнопки, який відтворює відео, ховає модальне вікно і видаляє елемент
     button.addEventListener('click', () => {
       player.playVideo();
       modal.style.display = 'none';
@@ -32,10 +41,10 @@ document.addEventListener('DOMContentLoaded', event => {
 
   window.onYouTubeIframeAPIReady = onYouTubeIframeAPIReady;
 
-  // Створюємо елемент при відкритті модального вікна
+  // Створюємо новий елемент div
   const el = document.createElement('div');
 
-  // Встановлюємо параметри елементу
+  // Налаштовуємо атрибути та стилі нового елемента
   el.title = 'We stand with Ukraine';
   el.style.cursor = 'pointer';
   el.style.right = '-80px';
@@ -46,10 +55,11 @@ document.addEventListener('DOMContentLoaded', event => {
   el.style.height = '54px';
   el.style.position = 'fixed';
   el.style.zIndex = '999';
-
   el.setAttribute('id', 'we-stand-with-ukraine');
+
+  // Додаємо новий елемент в документ
   document.body.appendChild(el);
 
-  // Показуємо модальне вікно при відкритті сторінки
+  // Показуємо модальне вікно
   modal.style.display = 'block';
 });
