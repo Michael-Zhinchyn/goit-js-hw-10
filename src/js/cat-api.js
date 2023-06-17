@@ -22,7 +22,7 @@ closeButton.addEventListener('click', () => {
   backdrop.style.display = 'none';
 });
 
-export function createBreedsMarkup(items) {
+function createBreedsMarkup(items) {
   return items
     .map(item => `<option value="${item.id}">${item.name}</option>`)
     .join('');
@@ -42,7 +42,6 @@ export function fetchBreeds() {
       breeds = data;
       selectBreed.innerHTML = createBreedsMarkup(data);
       $('select').select2();
-
       loader.style.display = 'none';
     })
     .catch(error => {
@@ -51,7 +50,7 @@ export function fetchBreeds() {
     });
 }
 
-export function fetchCatByBreed() {
+function fetchCatByBreed() {
   loader.style.display = 'block';
 
   fetch(`${BASE_URL}images/search?breed_ids=${chosenBred}`)
