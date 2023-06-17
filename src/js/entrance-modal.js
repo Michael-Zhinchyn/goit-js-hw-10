@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', event => {
 
     // При кліку на кнопку модального вікна відтворюємо відео, ховаємо модальне вікно та видаляємо елемент
     button.addEventListener('click', () => {
-      // player.playVideo();
+      player.playVideo();
       modal.style.display = 'none';
       el.parentNode.removeChild(el);
     });
