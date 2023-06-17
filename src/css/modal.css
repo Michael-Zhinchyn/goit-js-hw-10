@@ -34,19 +34,21 @@
     position: absolute;
     top: 5%;
     right: 5%;
-    color: rgb(0, 0, 0);
+    color: #ff04009f;
     text-align: center;
     font-weight: 500;
     border: none;
     padding: 15px;
-    background-color: #b9adad2a;
+    background-color: #fd7a0013;
     border-radius: 8px;
-    transition: color 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 200ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .cat-info-modal-Btn:hover {
-    color: #e17612;
+    color: #0c3ceaba;
     cursor: pointer;
+    background-color: #fd7a0008;
 }
 
 #cat-modal img {
