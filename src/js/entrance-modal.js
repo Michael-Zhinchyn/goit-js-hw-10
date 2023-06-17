@@ -2,9 +2,9 @@ document.addEventListener('DOMContentLoaded', event => {
   const modal = document.querySelector('.modal');
   const button = document.querySelector('.entrance-modal-Btn');
   // Завантажуємо YouTube IFrame Player API код асинхронно
-  var tag = document.createElement('script');
+  let tag = document.createElement('script');
   tag.src = 'https://www.youtube.com/iframe_api';
-  var firstScriptTag = document.getElementsByTagName('script')[0];
+  let firstScriptTag = document.getElementsByTagName('script')[0];
   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
   window.player; // Зробіть об'єкт player глобальним
