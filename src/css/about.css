@@ -1,6 +1,5 @@
 .nav {
-    padding: 20px;
-    /* Додано px */
+    padding: 20px; /* Додано px */
 }
 
 .clickable-element {
@@ -8,9 +7,8 @@
     flex-direction: column;
     font-size: 24px;
     font-weight: 500;
-    color: rgb(172, 140, 91);
-    padding: 15px;
-    /* Додано px */
+    color: #e17612;
+    padding: 15px; /* Додано px */
     transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -91,30 +89,22 @@ p {
 /* Media query for mobile devices */
 @media only screen and (max-width: 600px) {
     .clickable-element {
-        font-size: 20px;
-        /* Зменшено розмір шрифту */
+        font-size: 20px; /* Зменшено розмір шрифту */
     }
 
     .kitty-radio {
-        flex-direction: column;
-        /* Змінено на колонку */
-        width: 100%;
-        /* Змінено на повну ширину */
-        align-items: flex-start;
-        /* Змінено на вирівнювання по лівому краю */
+        flex-direction: column; /* Змінено на колонку */
+        width: 100%; /* Змінено на повну ширину */
+        align-items: flex-start; /* Змінено на вирівнювання по лівому краю */
     }
 
     .playBtn {
-        margin-right: 0;
-        /* Видалено відступ */
-        margin-bottom: 15px;
-        /* Додано відступ знизу */
+        margin-right: 0; /* Видалено відступ */
+        margin-bottom: 15px; /* Додано відступ знизу */
     }
 
     #player {
-        width: 100%;
-        /* Змінено на повну ширину */
-        height: auto;
-        /* Змінено на автоматичну висоту */
+        width: 100%; /* Змінено на повну ширину */
+        height: auto; /* Змінено на автоматичну висоту */
     }
 }
