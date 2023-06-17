@@ -8,12 +8,20 @@
     background-color: rgba(0, 0, 0, 0.758);
     justify-content: center;
     align-items: center;
+    padding: 20px;
+    /* додано */
 }
 
 .cat-info-block {
-    max-width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: calc(100% - 40px);
+    /* змінено */
+    max-height: calc(100% - 40px);
     /* додано */
-    margin: auto;
+    overflow: auto;
     /* додано */
     position: relative;
     background-color: white;
@@ -22,6 +30,8 @@
     font-weight: 500;
     color: rgb(37, 26, 12);
     border-radius: 10px;
+    margin: auto;
+    /* додано */
 }
 
 .cat-info-modal-Btn {
@@ -43,9 +53,13 @@
     cursor: pointer;
 }
 
-#cat-modal img {
+.text-content {
+    flex-basis: 50%;
+}
+
+.image-content img {
     max-width: 100%;
-    /* збільшено з 700px */
+    /* змінено */
     border-radius: 35px;
     padding: 20px;
     margin: auto;
@@ -54,11 +68,12 @@
 /* Media query for mobile devices */
 @media only screen and (max-width: 600px) {
     .cat-info-block {
+        flex-direction: column;
         padding: 10px;
         /* зменшено padding */
     }
 
-    #cat-modal img {
+    .image-content img {
         padding: 10px;
         /* зменшено padding */
     }
