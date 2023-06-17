@@ -1,3 +1,6 @@
+import './js/entrance-modal';
+import './js/video';
+
 import { fetchBreeds } from './js/cat-api';
 fetchBreeds();
 
@@ -16,6 +19,3 @@ createCatInfo();
 window.onload = function () {
   loader.style.display = 'none';
 };
-
-import './js/entrance-modal';
-import './js/video';
