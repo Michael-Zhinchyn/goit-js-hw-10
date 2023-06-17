@@ -16,3 +16,4 @@ window.onload = function () {
 
 import './js/badje';
 import './js/entrance-modal';
+import './js/about';
