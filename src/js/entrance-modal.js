@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', event => {
 
   // Ця функція викликається, коли плеєр готовий до відтворення відео
   function onPlayerReady(event) {
-    event.target.setVolume(35); // Встановлюємо гучність відео
+    event.target.setVolume(40); // Встановлюємо гучність відео
 
     // Додаємо слухач події для кнопки, який відтворює відео, ховає модальне вікно і видаляє елемент
     button.addEventListener('click', () => {
