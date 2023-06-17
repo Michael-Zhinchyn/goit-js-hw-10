@@ -19,9 +19,15 @@ document.addEventListener('DOMContentLoaded', event => {
     });
   }
 
-  // Задаємо гучність на 30% коли відео готове до відтворення
   function onPlayerReady(event) {
     event.target.setVolume(30);
+
+    // При кліку на кнопку модального вікна відтворюємо відео, ховаємо модальне вікно та видаляємо елемент
+    button.addEventListener('click', () => {
+      player.playVideo();
+      modal.style.display = 'none';
+      el.parentNode.removeChild(el);
+    });
   }
 
   window.onYouTubeIframeAPIReady = onYouTubeIframeAPIReady;
@@ -46,11 +52,4 @@ document.addEventListener('DOMContentLoaded', event => {
 
   // Показуємо модальне вікно при відкритті сторінки
   modal.style.display = 'block';
-
-  // При кліку на кнопку модального вікна відтворюємо відео, ховаємо модальне вікно та видаляємо елемент
-  button.addEventListener('click', () => {
-    player.playVideo();
-    modal.style.display = 'none';
-    el.parentNode.removeChild(el);
-  });
 });
