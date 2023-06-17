@@ -11,6 +11,7 @@
 }
 
 .cat-info-block {
+    width: auto;
     position: relative;
     background-color: white;
     padding: 40px;
@@ -45,4 +46,5 @@
     max-width: 700px;
     border-radius: 35px;
     padding: 20px;
+    margin: auto;
 }
