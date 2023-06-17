@@ -12,7 +12,7 @@ const backdrop = document.querySelector('#backdrop');
 const catModal = document.querySelector('#cat-modal-content');
 const closeButton = document.querySelector('#close-button');
 
-let chosenBreed;
+let chosenBred;
 let breeds = [];
 
 errorMsg.style.display = 'none';
@@ -53,7 +53,7 @@ export function fetchBreeds() {
 export function fetchCatByBreed() {
   loader.style.display = 'block';
 
-  fetch(`${BASE_URL}images/search?breed_ids=${chosenBreed}`)
+  fetch(`${BASE_URL}images/search?breed_ids=${chosenBred}`)
     .then(response => {
       if (!response.ok) {
         Notify.failure('Котик не знайдений');
@@ -61,7 +61,7 @@ export function fetchCatByBreed() {
       return response.json();
     })
     .then(data => {
-      catModal.innerHTML = createCatInfo(data, chosenBreed);
+      catModal.innerHTML = createCatInfo(data, chosenBred);
       backdrop.style.display = 'flex';
       loader.style.display = 'none';
     })
@@ -74,7 +74,7 @@ export function fetchCatByBreed() {
 selectBreed.addEventListener('change', onChange);
 
 export function onChange(event) {
-  chosenBreed = event.target.value;
+  chosenBred = event.target.value;
   fetchCatByBreed();
 }
 
@@ -85,15 +85,10 @@ export function getBreedById(id) {
 export function createCatInfo(catData, id) {
   const cat = catData[0];
   const catBreed = getBreedById(id);
-
-  if (!catBreed) {
-    return '';
-  }
-
   return `
     <h2>${catBreed.name}</h2>
     <p>${catBreed.temperament}</p>
     <p>${catBreed.description}</p>
-    <img src="${cat.url}" alt="${catBreed.name}" width="500">
+    <img src="${cat.url}" alt="${catBreed.name}" width=500>
   `;
 }

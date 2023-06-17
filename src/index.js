@@ -10,6 +10,9 @@ toggleDescription();
 import { onYouTubeIframeAPIReady } from './js/video';
 onYouTubeIframeAPIReady();
 
+import { createCatInfo } from './js/cat-api';
+createCatInfo();
+
 window.onload = function () {
   loader.style.display = 'none';
 };
