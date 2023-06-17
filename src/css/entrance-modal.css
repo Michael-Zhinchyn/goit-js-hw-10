@@ -1,6 +1,4 @@
 .modal {
-   
-    /* Це ви можете змінити на display: flex, щоб побачити модальне вікно */
     position: fixed;
     z-index: 1;
     left: 0;
@@ -25,9 +23,10 @@
     background-color: #fefefe;
     border-radius: 15px;
     text-align: center;
-    
     padding: 20px;
     border: 1px solid #888;
+    width: 90%;
+    /* updated */
 }
 
 .modal-header {
@@ -54,7 +53,6 @@
     border-radius: 10px;
     transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
     margin-top: 50px;
-    /* Додано відступ зверху, щоб відділити кнопку від іншого контенту */
 }
 
 .entrance-modal-Btn:hover {
@@ -67,4 +65,27 @@
     display: block;
     height: 0;
     clear: both;
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 600px) {
+    .modal-wrapper {
+        transform: translate(-50%, -50%);
+    }
+
+    .modal-content {
+        width: 95%;
+    }
+
+    .modal-header {
+        font-size: 32px;
+    }
+
+    .modal-text {
+        font-size: 18px;
+    }
+
+    .entrance-modal-Btn {
+        padding: 10px 30px;
+    }
 }
