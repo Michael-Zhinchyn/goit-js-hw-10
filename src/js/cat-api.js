@@ -50,7 +50,7 @@ export function fetchBreeds() {
     });
 }
 
-function fetchCatByBreed() {
+export function fetchCatByBreed() {
   loader.style.display = 'block';
 
   fetch(`${BASE_URL}images/search?breed_ids=${chosenBred}`)
