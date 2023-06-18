@@ -7,6 +7,7 @@
     height: 100%;
     overflow: auto;
     background-color: rgba(20, 19, 19, 0.847);
+    /* Задаємо позицію, розміри та стилі для елемента з класом "modal" */
 }
 
 .modal-wrapper {
@@ -17,6 +18,7 @@
     transform: translate(-50%, -65%);
     flex-direction: column;
     align-items: center;
+    /* Задаємо властивості позиціонування, вирівнювання та напряму для елемента з класом "modal-wrapper" */
 }
 
 .modal-content {
@@ -28,28 +30,33 @@
     border: 1px solid #888;
     width: 90%;
     margin: auto;
+    /* Задаємо стилі для вмісту модального вікна */
 }
 
 .modal-header {
     padding: 20px;
     color: #e17612;
     font-size: 40px;
+    /* Задаємо стилі для заголовку модального вікна */
 }
 
 .modal-text {
     font-size: 22px;
     font-weight: 500;
     padding: 10px;
+    /* Задаємо стилі для тексту модального вікна */
 }
 
 .thanks {
     font-style: italic;
     margin-top: 30px;
     text-align: right;
+    /* Задаємо стилі для роздягненого тексту "thanks" */
 }
 
 .entrance-modal-Btn {
-    background-color: rgba(223, 190, 163, 0.062);;
+    background-color: rgba(223, 190, 163, 0.062);
+    ;
     color: #fefefe;
     border: none;
     font-size: 28px;
@@ -60,13 +67,15 @@
         background-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
     margin-top: 100px;
     ;
+    /* Задаємо стилі для кнопки "entrance-modal-Btn" */
 }
 
 .entrance-modal-Btn:hover {
     background-color: rgba(223, 190, 163, 0);
     cursor: pointer;
     color: #e17612;
-    cursor: var(--cat-paw)
+    cursor: var(--cat-paw);
+    /* Задаємо стилі для кнопки "entrance-modal-Btn" при наведенні */
 }
 
 .modal-content::after {
@@ -74,6 +83,7 @@
     display: block;
     height: 0;
     clear: both;
+    /* Задаємо стилі для псевдоелемента ::after модального вікна */
 }
 
 /* Media query for mobile devices */
@@ -82,19 +92,29 @@
         transform: translate(-50%, -50%);
     }
 
+    /* Змінюємо позиціонування для елемента з класом "modal-wrapper" на мобільних пристроях */
+
     .modal-content {
         width: 95%;
     }
+
+    /* Змінюємо ширину модального вікна на мобільних пристроях */
 
     .modal-header {
         font-size: 32px;
     }
 
+    /* Змінюємо розмір заголовка модального вікна на мобільних пристроях */
+
     .modal-text {
         font-size: 18px;
     }
 
+    /* Змінюємо розмір тексту модального вікна на мобільних пристроях */
+
     .entrance-modal-Btn {
         padding: 10px 30px;
     }
+
+    /* Змінюємо відступи кнопки "entrance-modal-Btn" на мобільних пристроях */
 }
