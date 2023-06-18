@@ -28,6 +28,7 @@
 p {
     margin-top: 15px;
     font-size: large;
+    color: #2a0f5b;
 }
 
 .welcome {
@@ -40,7 +41,7 @@ p {
 .content-text {
     margin-top: 8px;
     font-size: 19px;
-    color: rgb(28, 6, 6)
+    color: #2a0f5b;
 }
 
 .kitty-radio {

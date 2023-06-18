@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     border-bottom:
-        1px solid rgb(0, 0, 0);
+        1px solid #000000;
 }
 
 .header-nav {
@@ -11,15 +11,16 @@
 
 .heading {
     padding: 22 22;
+    color: #170833;
 }
 
 .fa-external-link {
     font-size: 22px;
     padding: 30;
-    color: #261a05;
+    color: #e17612;
     transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .fa-external-link:hover {
-    color: #e17612;
+    color: #1c0d37;
 }

@@ -35,7 +35,7 @@
 
 .modal-header {
     padding: 20px;
-    color: #e17612;
+    color: #f89233;
     font-size: 40px;
     /* Задаємо стилі для заголовку модального вікна */
 }
@@ -43,6 +43,7 @@
 .modal-text {
     font-size: 22px;
     font-weight: 500;
+    color: #fefefe;
     padding: 10px;
     /* Задаємо стилі для тексту модального вікна */
 }
@@ -50,6 +51,7 @@
 .thanks {
     font-style: italic;
     margin-top: 30px;
+    color: #fefefe;
     text-align: right;
     /* Задаємо стилі для роздягненого тексту "thanks" */
 }
