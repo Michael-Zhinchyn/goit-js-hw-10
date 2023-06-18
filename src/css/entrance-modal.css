@@ -63,7 +63,7 @@
 .entrance-modal-Btn {
     background-color: rgba(223, 190, 163, 0.062);
     ;
-    color: #fefefe;
+    color: #f9ae00;
     border: none;
     font-size: 28px;
     font-weight: 500;
@@ -79,7 +79,7 @@
 .entrance-modal-Btn:hover {
     background-color: rgba(223, 190, 163, 0);
     cursor: pointer;
-    color: #e17612;
+    color: #fefefe;
     cursor: var(--cat-paw);
     /* Задаємо стилі для кнопки "entrance-modal-Btn" при наведенні */
 }
