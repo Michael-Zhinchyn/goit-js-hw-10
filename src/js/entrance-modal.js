@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', event => {
       height: '315',
       width: '560',
       videoId: '1COL3r-dOl4',
+      playerVars: { origin: window.location.origin },
       events: {
         onReady: onPlayerReady,
       },

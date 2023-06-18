@@ -7,8 +7,7 @@ fetchBreeds();
 import { toggleDescription } from './js/about';
 toggleDescription();
 
-import { onYouTubeIframeAPIReady } from './js/video';
-onYouTubeIframeAPIReady();
+import { loader } from './js/cat-api';
 
 window.onload = function () {
   loader.style.display = 'none';

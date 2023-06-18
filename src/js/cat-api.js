@@ -6,6 +6,7 @@ import 'select2/dist/css/select2.min.css'; // CSS для випадаючого 
 // Створюємо константи для наших HTML-елементів
 const selectBreed = document.querySelector('.breed-select');
 const loader = document.querySelector('.loader');
+export { loader };
 const errorMsg = document.querySelector('.error');
 const BASE_URL = 'https://api.thecatapi.com/v1/'; // Базовий URL нашого API
 const API_KEY = 'your_api_key'; // Ключ до нашого API (замініть "your_api_key" на ваш власний ключ)
