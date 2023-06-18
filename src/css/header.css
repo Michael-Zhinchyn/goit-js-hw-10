@@ -18,8 +18,10 @@
     font-size: 22px;
     padding: 30;
     color: #003cff;
-    transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1)
+    transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+
 
 .fa-external-link:hover {
     color: #1c0d37;
