@@ -18,7 +18,7 @@
 
 
 .fa-external-link {
-    font-size: 22px;
+    font-size: 20px;
     padding: 30;
     font-weight: 300;
     color: #e17612;
@@ -29,6 +29,7 @@
 
 .click-span {
     color: #164fde;
+    font-size: 20px;
     margin-left: 10px;
 }
 
