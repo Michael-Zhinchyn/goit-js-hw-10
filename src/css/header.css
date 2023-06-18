@@ -19,7 +19,7 @@
     padding: 30;
     font-weight: 300;
     
-    color: #006eff;
+    color: #0f7d30;
     transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1);
     text-decoration: underline;
 }
