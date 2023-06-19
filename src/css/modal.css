@@ -20,9 +20,9 @@ body {
     pointer-events: all;
     position: absolute;
     top: 50%;
-    left: 30%;
+    left: 25%;
     /* зміщуємо лівіше */
-    transform: translate(-30%, -50%);
+    transform: translate(-25%, -50%);
     /* зміщуємо лівіше */
     width: 70%;
     /* збільшуємо розмір */
@@ -65,7 +65,7 @@ body {
 #cat-modal img {
     max-width: 100%;
     border-radius: 35px;
-    padding: 20px;
+    padding: 15px;
     margin: auto;
 }
 
