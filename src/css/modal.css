@@ -1,4 +1,8 @@
+body {
+    position: relative;
+}
 .cat-info-overlay {
+    pointer-events: none;
     display: none;
     position: fixed;
     top: 0;
@@ -9,17 +13,18 @@
     justify-content: center;
     align-items: center;
     padding: 20px;
-    /* додано */
+    overflow-y: auto;
 }
 
 .cat-info-block {
+    pointer-events: all;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     max-width: calc(100% - 40px);
-    /* змінено */
     max-height: calc(100% - 40px);
-    /* додано */
-    overflow: auto;
-    /* додано */
-    position: relative;
+    overflow: hidden;
     background-color: white;
     padding: 40px;
     font-size: 22px;
@@ -27,13 +32,17 @@
     color: rgb(37, 26, 12);
     border-radius: 10px;
     margin: auto;
-    /* додано */
+    scroll-behavior: smooth;
+}
+
+.breed-select {
+    z-index: 2000;
 }
 
 .cat-info-modal-Btn {
     position: absolute;
-    top: 3%;
-    right: 1%;
+    top: 2%;
+    right: 2%;
     color: #ff04009f;
     text-align: center;
     font-weight: 500;
@@ -54,7 +63,6 @@
 
 #cat-modal img {
     max-width: 100%;
-    /* змінено */
     border-radius: 35px;
     padding: 20px;
     margin: auto;
@@ -64,11 +72,9 @@
 @media only screen and (max-width: 600px) {
     .cat-info-block {
         padding: 10px;
-        /* зменшено padding */
     }
 
     #cat-modal img {
         padding: 10px;
-        /* зменшено padding */
     }
 }
