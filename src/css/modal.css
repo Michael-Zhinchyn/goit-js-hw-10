@@ -62,6 +62,8 @@ body {
     cursor: var(--cat-paw);
 }
 
+
+
 #cat-modal img {
     max-width: 100%;
     border-radius: 35px;
