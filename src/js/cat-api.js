@@ -110,9 +110,15 @@ function createCatInfo(catData, id) {
   const catBreed = getBreedById(id);
 
   return `
-    <h2>${catBreed.name}</h2>
-    <p>${catBreed.temperament}</p>
-    <p>${catBreed.description}</p>
-    <img src="${cat.url}" alt="${catBreed.name}" width=600>
+    <div class="cat-info-container">
+      <div class="cat-text">
+        <h2>${catBreed.name}</h2>
+        <p>${catBreed.temperament}</p>
+        <p>${catBreed.description}</p>
+      </div>
+      <div class="cat-image">
+        <img src="${cat.url}" alt="${catBreed.name}">
+      </div>
+    </div>
   `;
 }

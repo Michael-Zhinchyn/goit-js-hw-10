@@ -20,27 +20,29 @@ body {
     pointer-events: all;
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: calc(100% - 40px);
+    left: 30%;
+    /* зміщуємо лівіше */
+    transform: translate(-30%, -50%);
+    /* зміщуємо лівіше */
+    width: 70%;
+    /* збільшуємо розмір */
     max-height: calc(100% - 40px);
     overflow: hidden;
     background-color: white;
-    padding: 40px;
+    padding: 45px;
     font-size: 22px;
     font-weight: 500;
     color: rgb(37, 26, 12);
     border-radius: 10px;
     margin: auto;
     scroll-behavior: smooth;
-
 }
 
 
 .cat-info-modal-Btn {
     position: absolute;
-    top: 2%;
-    right: 2%;
+    top: 1%;
+    right: 1%;
     color: #ff04009f;
     text-align: center;
     font-weight: 500;
@@ -50,13 +52,14 @@ body {
     border-radius: 8px;
     transition: color 200ms cubic-bezier(0.4, 0, 0.2, 1),
         background-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .cat-info-modal-Btn:hover {
     color: #0c3ceaba;
     cursor: pointer;
     background-color: #fd7a0008;
-    
+    cursor: var(--cat-paw);
 }
 
 #cat-modal img {

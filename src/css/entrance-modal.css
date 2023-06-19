@@ -62,7 +62,6 @@
 
 .entrance-modal-Btn {
     background-color: rgba(223, 190, 163, 0.062);
-    ;
     color: #f9ae00;
     border: none;
     font-size: 28px;
@@ -72,7 +71,6 @@
     transition: color 200ms cubic-bezier(0.4, 0, 0.2, 1),
         background-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
     margin-top: 100px;
-    ;
     /* Задаємо стилі для кнопки "entrance-modal-Btn" */
 }
 
@@ -98,29 +96,24 @@
         transform: translate(-50%, -50%);
     }
 
-    /* Змінюємо позиціонування для елемента з класом "modal-wrapper" на мобільних пристроях */
 
     .modal-content {
         width: 95%;
     }
 
-    /* Змінюємо ширину модального вікна на мобільних пристроях */
 
     .modal-header {
         font-size: 32px;
     }
 
-    /* Змінюємо розмір заголовка модального вікна на мобільних пристроях */
 
     .modal-text {
         font-size: 18px;
     }
 
-    /* Змінюємо розмір тексту модального вікна на мобільних пристроях */
 
     .entrance-modal-Btn {
         padding: 10px 30px;
     }
 
-    /* Змінюємо відступи кнопки "entrance-modal-Btn" на мобільних пристроях */
 }
