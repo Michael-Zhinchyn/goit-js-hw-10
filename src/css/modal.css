@@ -24,7 +24,7 @@ body {
     /* зміщуємо лівіше */
     transform: translate(-25%, -50%);
     /* зміщуємо лівіше */
-    width: 70%;
+    width: 75%;
     /* збільшуємо розмір */
     max-height: calc(100% - 40px);
     overflow: hidden;
