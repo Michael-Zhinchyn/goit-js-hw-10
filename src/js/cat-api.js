@@ -1,8 +1,8 @@
-// Імпортуємо залежності
+// Імпортуємо потрібні нам бібліотеки
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import SlimSelect from 'slim-select';
 
-// Створюємо константи для наших HTML-елементів
+// Оголошуємо змінні для наших HTML-елементів
 const selectBreed = document.querySelector('.breed-select');
 const loader = document.querySelector('.loader');
 const errorMsg = document.querySelector('.error');
@@ -12,13 +12,14 @@ const backdrop = document.querySelector('#backdrop');
 const catModal = document.querySelector('#cat-modal-content');
 const closeButton = document.querySelector('#close-button');
 
-// Ініціалізація змінних
+// Оголошуємо глобальні змінні
 let chosenBred = null;
 let breeds = [];
 
+// Ініціалізуємо об'єкт slimSelect
 let slimSelect = new SlimSelect({
   select: '.breed-select',
-  placeholder: 'Select a breed',
+  placeholder: 'Loading breeds...',
   allowDeselect: true,
   deselectLabel: '<span class="placeholder">Select a breed</span>',
   showFirstOption: false,
@@ -33,13 +34,15 @@ let slimSelect = new SlimSelect({
 errorMsg.style.display = 'none';
 backdrop.style.display = 'none';
 
+// Додаємо подію на кнопку закриття модального вікна
 closeButton.addEventListener('click', () => {
   backdrop.style.display = 'none';
 });
 
+// Функція для створення розмітки для порід
 function createBreedsMarkup(items) {
   slimSelect.setData(
-    [{ text: '', value: '' }].concat(
+    [{ text: 'Select a breed', value: '' }].concat(
       items.map(item => {
         return { text: item.name, value: item.id };
       })
@@ -47,9 +50,9 @@ function createBreedsMarkup(items) {
   );
 }
 
+// Функція для отримання даних про породи
 export function fetchBreeds() {
   loader.style.display = 'block';
-
   fetch(`${BASE_URL}breeds?api_key=${API_KEY}`)
     .then(response => {
       if (!response.ok) {
@@ -59,7 +62,7 @@ export function fetchBreeds() {
     })
     .then(data => {
       breeds = data;
-      selectBreed.innerHTML = createBreedsMarkup(data);
+      createBreedsMarkup(data);
       loader.style.display = 'none';
     })
     .catch(error => {
@@ -68,13 +71,12 @@ export function fetchBreeds() {
     });
 }
 
+// Функція для отримання даних про котів за породою
 export function fetchCatByBreed(breed) {
   if (!breed) {
     return;
   }
-
   loader.style.display = 'block';
-
   fetch(`${BASE_URL}images/search?breed_ids=${breed}`)
     .then(response => {
       if (!response.ok) {
@@ -94,6 +96,7 @@ export function fetchCatByBreed(breed) {
     });
 }
 
+// Додаємо подію на зміну вибору породи
 selectBreed.addEventListener('change', event => {
   chosenBred = event.target.value;
   if (chosenBred) {
@@ -101,14 +104,15 @@ selectBreed.addEventListener('change', event => {
   }
 });
 
+// Функція для отримання породи за ID
 function getBreedById(id) {
   return breeds.find(breed => breed.id === id);
 }
 
+// Функція для створення розмітки для інформації про кота
 function createCatInfo(catData, id) {
   const cat = catData[0];
   const catBreed = getBreedById(id);
-
   return `
     <div class="cat-info-container">
       <div class="cat-text">
