@@ -1,7 +1,5 @@
 // Імпортуємо залежності
 import { Notify } from 'notiflix/build/notiflix-notify-aio'; // Бібліотека для показу сповіщень
-import 'select2/dist/js/select2.min.js'; // Бібліотека для кращого візуального представлення випадаючого списку
-import 'select2/dist/css/select2.min.css'; // CSS для випадаючого списку
 
 // Створюємо константи для наших HTML-елементів
 const selectBreed = document.querySelector('.breed-select');
