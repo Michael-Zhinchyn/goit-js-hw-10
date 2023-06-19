@@ -5,7 +5,6 @@ export const loader = document.querySelector('.loader');
 
 // Оголошуємо змінні для наших HTML-елементів
 const selectBreed = document.querySelector('.breed-select');
-const loader = document.querySelector('.loader');
 const errorMsg = document.querySelector('.error');
 const BASE_URL = 'https://api.thecatapi.com/v1/';
 const API_KEY = 'your_api_key';
