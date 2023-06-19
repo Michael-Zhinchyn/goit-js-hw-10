@@ -1,6 +1,7 @@
 // Імпортуємо потрібні нам бібліотеки
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import SlimSelect from 'slim-select';
+export const loader = document.querySelector('.loader');
 
 // Оголошуємо змінні для наших HTML-елементів
 const selectBreed = document.querySelector('.breed-select');
