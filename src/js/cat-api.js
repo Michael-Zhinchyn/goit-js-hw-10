@@ -23,7 +23,6 @@ let slimSelect = new SlimSelect({
   allowDeselect: true,
   deselectLabel: '<span class="placeholder">Select a breed</span>',
   showFirstOption: false,
-  showOptionsLimit: 20, // Змініть це значення на бажану кількість відображуваних опцій
   onChange: info => {
     let selectedBreed = info[0].value;
     if (selectedBreed) {
