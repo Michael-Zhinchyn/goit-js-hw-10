@@ -33,11 +33,9 @@ body {
     border-radius: 10px;
     margin: auto;
     scroll-behavior: smooth;
+
 }
 
-.breed-select {
-    z-index: 2000;
-}
 
 .cat-info-modal-Btn {
     position: absolute;

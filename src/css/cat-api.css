@@ -13,6 +13,12 @@
     color: #fff;
 }
 
+.cat-api-select {
+    width: 270px;
+    position: absolute;
+    right: 2%;
+}
+
 .loader:before,
 .loader:after {
     content: '';
@@ -26,6 +32,8 @@
     transform: rotateX(70deg);
     animation: 1s spin linear infinite;
 }
+
+
 
 .loader:after {
     color: #FF3D00;

@@ -1,20 +1,35 @@
 // Імпортуємо залежності
 import { Notify } from 'notiflix/build/notiflix-notify-aio'; // Бібліотека для показу сповіщень
+import SlimSelect from 'slim-select';
 
 // Створюємо константи для наших HTML-елементів
 const selectBreed = document.querySelector('.breed-select');
 const loader = document.querySelector('.loader');
-export { loader };
 const errorMsg = document.querySelector('.error');
 const BASE_URL = 'https://api.thecatapi.com/v1/'; // Базовий URL нашого API
 const API_KEY = 'your_api_key'; // Ключ до нашого API (замініть "your_api_key" на ваш власний ключ)
 const backdrop = document.querySelector('#backdrop');
 const catModal = document.querySelector('#cat-modal-content');
 const closeButton = document.querySelector('#close-button');
+export { loader };
 
 // Ініціалізація змінних
 let chosenBred;
 let breeds = [];
+
+let slimSelect = new SlimSelect({
+  select: '.breed-select',
+  placeholder: 'Select a breed',
+  allowDeselect: true,
+  deselectLabel: '<span class="placeholder">Select a breed</span>',
+  showFirstOption: false, // Додайте цю строку
+  onChange: info => {
+    let selectedBreed = info[0].value;
+    if (selectedBreed) {
+      fetchCatByBreed(selectedBreed); // Передаємо selectedBreed як аргумент
+    }
+  },
+});
 
 // Приховуємо повідомлення про помилку та фоновий екран
 errorMsg.style.display = 'none';
@@ -27,9 +42,13 @@ closeButton.addEventListener('click', () => {
 
 // Функція для створення HTML-розмітки для порід
 function createBreedsMarkup(items) {
-  return items
-    .map(item => `<option value="${item.id}">${item.name}</option>`) // Створюємо випадаючий список з породами
-    .join('');
+  slimSelect.setData(
+    [{ text: '', value: '' }].concat(
+      items.map(item => {
+        return { text: item.name, value: item.id };
+      })
+    )
+  );
 }
 
 // Функція для отримання даних про породи котів з API
@@ -52,6 +71,7 @@ export function fetchBreeds() {
     })
     .catch(error => {
       console.log(error); // Показуємо помилку в консолі
+
       loader.style.display = 'none'; // Приховуємо "завантажувач"
     });
 }
